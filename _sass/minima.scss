@@ -10,11 +10,11 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #2d6e01 !default; // Hover color and regular text
+$text-color:       #828282 !default; // Hover color and regular text
 $background-color: #121212 !default;
-$brand-color:      #828282 !default;  // Text next to logo
+$brand-color:      #2d6e01 !default;  // Text next to logo
 
-$grey-color:       #828282 !default; // Hyper linked text
+$grey-color:       #2d6e01 !default; // Hyper linked text
 $grey-color-light: lighten($grey-color, 50%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
