@@ -15,8 +15,8 @@ $background-color: #121212 !default;
 $brand-color:      #2d6e01 !default;  // Text next to logo
 
 $grey-color:       #2d6e01 !default; // Hyper linked text
-$grey-color-light: $grey-color !default; //darken($grey-color, 25%) !default;
-$grey-color-dark:  $grey-color !default;//darken($grey-color, 25%) !default;
+$grey-color-light: #000 !default; //darken($grey-color, 25%) !default;
+$grey-color-dark:  #000 !default;//darken($grey-color, 25%) !default;
 
 $table-text-align: left !default;
 
