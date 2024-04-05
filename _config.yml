@@ -21,9 +21,9 @@
 title: Parkwork5
 email: Parkwork5@proton.me
 description: >- # this means to ignore newlines until "baseurl:"
-  Reverse engineering and stuff
+  Threat intelligence and stuff
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://parkwork5.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Parkwork5
 github_username:  Parkwork5
 
