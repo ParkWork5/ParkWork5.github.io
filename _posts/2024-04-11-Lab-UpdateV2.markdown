@@ -13,7 +13,7 @@ After some more experimenting and a few days of work I found a solution for capt
 5. Connect port Z to the CAPE host with another NIC.
 6. Edit the Auxiliary conf to have tcpdump point to the new NIC on the host machine.
 
-![Home Lab]("/assets/images/HomeLabSetupV2.jpg")
+![Home Lab](/assets/images/HomeLabSetupV2.jpg)
 
 |Color|VLAN|Description|
 |-----|----|-----------|
@@ -26,13 +26,13 @@ After some more experimenting and a few days of work I found a solution for capt
 
 2. I used isc-dhcp as my DHCP server and it binds to all interfaces(based on the one form post I saw about it). The Fog agent is smart enough to use the correct interface and does not get confused.
 
-[My dhcpd.conf]("/assets/configs/dhcpd.conf") 
+[My dhcpd.conf](/assets/configs/dhcpd.conf) 
 
-[My isc-dhcp-server]("/assets/configs/isc-dhcp-server")
+[My isc-dhcp-server](/assets/configs/isc-dhcp-server)
 
 3. Below are an updated list of firewall rules that work and have been tested with a full analysis on CAPE. I used Gufw for creating the rules on Ubuntu with ufw. 
 
-[uwf rules]("/assets/configs/WorkingFOGRules.profile")
+[uwf rules](/assets/configs/WorkingFOGRules.profile)
 
 Finally I can get started on analyzing malware and it only took ~30 hours of work and a few month break to get CAPE working correctly.
 
