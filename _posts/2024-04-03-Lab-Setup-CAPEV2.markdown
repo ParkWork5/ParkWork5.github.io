@@ -5,6 +5,8 @@ date:   2024-04-03
 categories: jekyll update
 ---
 
+# Some stuff in this post is incorrect please view my Lab Update post
+
 # Lab Setup
 
 I wanted to show my thought process on setting up my malware analysis lab and some tips for installing CAPEV2. My lab network is all physical devices to avoid any issues of malware not running because it detected it was on a VM.
