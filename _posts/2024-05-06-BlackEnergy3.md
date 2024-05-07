@@ -6,7 +6,7 @@ The sample I got is probably BE3 based on the [timeline](https://malpedia.caad.f
 
 ![UntanslatedPhish](/assets/images/01-BlackEnergy/SpearPhishExcel.png)
 
-![TranslatedPhish](/assets/images/01-Blackenergy/SpearPhishExcelMachineTranslated.png)
+![TranslatedPhish](/assets/images/01-BlackEnergy/SpearPhishExcelMachineTranslated.png)
 
 
 Cool phish but, what I am really after is that sweet VBA code. Unfortunately when pulling it up I saw that it was password protected.
