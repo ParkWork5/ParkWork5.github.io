@@ -1,4 +1,4 @@
-No networking data since even through I tell CAPE to capture traffic off a new interface it doesn’t care and still captures traffic off the old interface.
+No networking data since even through I tell CAPE to capture traffic off a new interface it doesn’t care and still captures traffic off the old interface.[Not possible](https://github.com/kevoreilly/CAPEv2/issues/2085)
 
 I was looking at [this](https://www.withsecure.com/en/whats-new/pressroom/withsecure-uncovers-kapeka-a-new-malware-with-links-to-russian-nation-state-threat-group-sandworm) article by WithSecure Research talking about APT-44/Sandworm group and a new ransomware discovered being used by them called Kapeka. The author mentions based on their research that Kapeka came from GreyEnergy and prior to that BlackEnergy(BE). Kapeka looks hard so, I found a [sample](https://www.hybrid-analysis.com/sample/052ebc9a518e5ae02bbd1bd3a5a86c3560aefc9313c18d81f6670c3430f1d4d4/568bdc5d0e316d1638c0daab) of BE from Hybrid Analysis and got to work.
 
@@ -43,12 +43,15 @@ Here are some interesting things I found when looking at the strings dumped from
 
 
 	
-Fontcache.dat when loaded will create DLLloader32_####.exe into the same directory and then runs itself. Where each # is a random alphanumeric character. This exe is a legitimate signed executable per VirusTotal. Using x32 dbg I was not able to figure out how to see what fontcache.dat did when it was loaded by DLLloader32. I think I am suppose to dump memory from where fontcache.dat is loaded in but, not sure.  
+Fontcache.dat when ran will create DLLloader32_####.exe into the same directory and then run itself with DLLloader32. Where each # is a random alphanumeric character. DLLloader32 is a legitimate signed executable per VirusTotal. Using x32 dbg I was not able to figure out how to see what fontcache.dat did when it was loaded by DLLloader32. I think I am suppose to dump memory from where fontcache.dat is loaded in but, not sure.  
 
 ![DLLLLoader](/assets/images/01-BlackEnergy/DLLLExe.png)
 
+This was a quick analysis to see wht i could figure out. I did figure out how to do basic dynamic debugging which is very cool.
 
 # Credits:
 <a href="https://www.flaticon.com/free-icons/spreadsheet" title="spreadsheet icons">Spreadsheet icons created by Hopstarter – Flaticon</a>
 
 <a href="https://www.flaticon.com/free-icons/malware" title="malware icons">Malware icons created by Freepik - Flaticon</a>
+
+I did reference someone's blog throughout but, I forgot to save the url.
