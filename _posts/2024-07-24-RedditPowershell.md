@@ -55,7 +55,7 @@ Nothing found since it is obfuscated.
 
 |||
 |-|-|
-|Name|datarun(Based on variable name)|
+|Name|datarun|
 |SHA256|cae5f0497d6b9b5a568f05ea504e11b51d89bc715bf0e236ca9af633246b4f5a|
 |VT|https://www.virustotal.com/gui/search/cae5f0497d6b9b5a568f05ea504e11b51d89bc715bf0e236ca9af633246b4f5a|
 |Operating System|Windows(95)[I386, 32-bit, GUI]|
@@ -104,10 +104,12 @@ Nothing found since it is obfuscated.
 	2.3 Uploads the data it finds to the server it successfully made a SSL/TSL connection to.
 ## Networking
 
+URLS:
 comm.sells-it[.]net
 coms.sells-it[.]net
 comss.sells-it[.]net
 comas.sells-it[.]net
+
 Websites are down as of 5/19. 
 
 ## Interesting Strings(if any)
