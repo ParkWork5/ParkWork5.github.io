@@ -4,9 +4,9 @@
 |----|----|--|-------|
 |reddit.ps1|1d8263d5990e55619974f81ed1dd441def3f761fcecb160f056a459b74e635c6|https://www.virustotal.com/gui/file/1d8263d5990e55619974f81ed1dd441def3f761fcecb160f056a459b74e635c6|https://bazaar.abuse.ch/sample/1d8263d5990e55619974f81ed1dd441def3f761fcecb160f056a459b74e635c6/|
 
-## What does it do
+## What It Does
 
-<mark>Insert PowerShell photo here</mark>
+![PowerShellDropper](/assets/images/02-RedditPowerShell/RedditPowerShellContents.png)
 
 1. Create svchost.vbs in and sleep for 5 secs. Svchost.vbs runs svchost.bat using PowerShell and suppresses any error messages.
 2. Create svchost.bat and sleep for 5 secs. Svchost.bat runs svchost.ps1 using the -ExecutionPolicy Bypass argument. None of the code in svchost.ps1 will be blocked from running.
@@ -26,16 +26,14 @@ The goal of the PowerShell script is to run scvhost.ps1 by chaining together dif
 
 The PowerShell file contains two variables with byte code. Paraphrasing from John Hammond [here](https://www.youtube.com/watch?v=MJBKxs8UnFE). We can take the filtered bytes and put them into CyberChef using the From charcode with base 10. Then we get the executables.
 
-<mark>Insert Cyber Chef photo here</mark>
-
-<mark>Insert exe properties photo here</mark>
+![CyberChefExe](/assets/images/02-RedditPowerShell/FoundExe.png)
 
 
 ## File Details
 
 |||
 |-|-|
-|Name|datanj(Name i gave file)|
+|Name|datanj|
 |SHA256|f2d110cfe5e1b2896938eda24bcab2a216cad057f46a4f1b1a990f46d93b4a91|
 |VT|https://www.virustotal.com/gui/file/f2d110cfe5e1b2896938eda24bcab2a216cad057f46a4f1b1a990f46d93b4a91/details|
 |Operating System|Windows(95)[I386, 32-bit, DLL]|
@@ -43,7 +41,9 @@ The PowerShell file contains two variables with byte code. Paraphrasing from Joh
 |Library|.NET(v4.0.30319)|
 |Protector|Confuser(1.X)|
 
-## What does it do
+![DIEDatanj](/assets/images/02-RedditPowerShell/DIE_datanj.png)
+
+## What It Does
 
 It is obfuscated using confuser 1.5 per Detect It Easy so, I am not able to figure it out.
 	 
@@ -63,9 +63,11 @@ Nothing found since it is obfuscated.
 |Language|BASIC|
 |Protector/Packer| None|
 
+![DIEDatarun](/assets/images/02-RedditPowerShell/DIE_datarun.png)
+
 ## Main Examination
 
-<mark>Insert DNSpy screenshot</mark>
+![DatarunDNSpy](/assets/images/02-RedditPowerShell/RedditMain.png)
 
 
 1. Sleeps for 3 thousand seconds based on string converted to int from another function.
@@ -81,7 +83,7 @@ Nothing found since it is obfuscated.
 	5. If the program finds itself based on file name then it will delete itself and sleep for 1000 seconds
 	6. Runs the .Close method on a Mutex object.
 	7. Tries to make the process a critical process and if it fails it will sleep for 100000 seconds at a time in a infinite for loop.
-	8. I think networking communication stuff happens here but, not sure. MSDN docs are kinda of generic on this stuff. <mark>Insert screenshot of ssl and tcp lcient init i think</mark>
+	8. I think networking communication stuff happens here but, not sure. MSDN docs are kinda of generic on this stuff.
 	9. Creates a new .bat file in %APPDATA% with a random name.
 		1. Code in .bat file looks to run it and then delete itself.(I think)
 	10. Runs the .bat file.
@@ -111,3 +113,11 @@ Websites are down as of 5/19.
 ## Interesting Strings(if any)
 
 Nothing found
+
+
+
+
+
+
+
+
