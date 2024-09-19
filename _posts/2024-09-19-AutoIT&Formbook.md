@@ -16,7 +16,6 @@ The first piece of malware I found was identified as an AutoIT script. Based on 
 
 After running through CAPEv2 and looking at the results the script will run Microsoft Edge and then loads accounts.google[.]com. It loops this behavior until the end of the simulation.  
 
-<div style="background-color: rgb(18, 18, 18);">
 ```
 Event ID: 22
 User: S-1-5-18
@@ -40,7 +39,6 @@ QueryResults: ::ffff:74.125.136.84;
 UtcTime: 2024-08-24 07:13:35.995
 QueryName: accounts.google.com
 ```
-</div>
 
 ![ChromeSearch](/assets/images/05/AutoIT/SearchesForChrome.jpg)
 
