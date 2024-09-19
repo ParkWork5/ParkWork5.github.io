@@ -75,7 +75,7 @@ The second piece of malware is from the Formbook family of malware. After watchi
 	1. Load bitmap image holding obfuscated 1st stage.
 	2. Perform de-obfuscation operations.(If any)
 	3. Loading the byte code of the bitmap.
-	3. Executing the byte code.
+	4. Executing the byte code.
 	
 
 Following the road map I found the image that was being loaded in my case Polygan.png shown in the code and in the resources section. 
