@@ -1,10 +1,10 @@
-I was looking for the next piece of software to reverse and saw a curious tag on one called [fuckedserver-net](https://bazaar.abuse.ch/browse/tag/fuckedserver-net/). Curiosity got the best of me and now i have 4 pieces of software to reverse. Censys said there was nothing being hosted on the server at the time i checked and all the urls in the PowerShell scripts failed to download anything. 
+I was looking for the next piece of software to reverse and saw a curious tag on Malware Bazaar called [fuckedserver-net](https://bazaar.abuse.ch/browse/tag/fuckedserver-net/). Curiosity got the best of me and now i have 4 pieces of software to reverse. Censys said there was nothing being hosted on the server at the time i checked and all the urls in the PowerShell scripts failed to download anything. 
 
 
 ## File Relations
 ![Flow Chart](/assets/images/09/FlowChart.png)
 
-Although the files were grouped up together I was not able to determine how the ef4c15 executable was related to the domain in the tag. I checked with VirusTotal and based on their data only the two PowerShell files were related because of their connection to fuckedserver[.]net. 
+Although the files were grouped up together I was not able to determine how the ef4c15 executable was related to the domain in the tag. I checked with VirusTotal and based on their data only the two PowerShell and the one msc files were related because of the connection to fuckedserver[.]net. 
 
 ## PowerShell 5e842.ps1
 
@@ -16,7 +16,7 @@ Although the files were grouped up together I was not able to determine how the 
 4. Creates a new virtual desktop called hVNC.
 5. Runs the functions CreateDesktop and CreateProcess from the loaded dll file.
 
-When looking through the code I was curious on what the deal was with the virtual desktops. I think the idea behind it was to hide the activity of the AnyDesk running in a different Windows desktop. Then run Explorer.exe on that created desktop to make it appear legitimate or if discovered to get the user to think Windows must be acting up like is usually does.
+When looking through the code I was curious on what the deal was with the virtual desktops. I think the idea behind it was to hide the activity of the AnyDesk running in a different Windows desktop. Then run Explorer.exe on that created desktop to make it appear legitimate or if discovered to get the user to think Windows must be acting up like it usually does.
 
 ## PowerShell 405d1.ps1
 
@@ -43,10 +43,6 @@ This is the dll file called nThread.dll in the PowerShell script. It contains a 
 Solid functions and nothing is obfuscated.
 
 ## ef4c16.exe
-
-When ran with no internet in VM with a debugger.
-Does a time check in the beginning before doing the partial unpack.
-When ran with internet in VM and time set to 2/1 it fully runs i think.
 
 This executable based on Yara rules is a sample of StealC infostealer. It has the ability to steal credentials, session tokens, and sensitive data from a variety of applications. It is also time gated and I found it does use one of the Window's API calls to check time early on in execution.
 
