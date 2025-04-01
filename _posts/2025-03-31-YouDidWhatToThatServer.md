@@ -2,7 +2,7 @@ I was looking for the next piece of software to reverse and saw a curious tag on
 
 
 ## File Relations
-![Flow Chart](/assets/images/09//FlowChart.png)
+![Flow Chart](/assets/images/09/FlowChart.png)
 
 Although the files were grouped up together I was not able to determine how the ef4c15 executable was related to the domain in the tag. I checked with VirusTotal and based on their data only the two PowerShell files were related because of their connection to fuckedserver[.]net. 
 
